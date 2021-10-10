@@ -1,9 +1,24 @@
-export const Login = () => {
+export const Login = (props) => {
+
+    const  {history} = props;
+
+
+    const sendDates = (event) => {
+        event.preventDefault();
+        console.log("hi");
+        history.push('/home');
+        
+       
+    }
     return(
-        <form action="/home">
-            <input type="text" className="user" placeholder="User"></input><br/>
+        <form onSubmit={sendDates}>
+            <input type="text" className="user" placeholder="username"></input><br/>
             <input type="password" className="password" placeholder="Password"></input><br/>
-            <input href="/hola" type="submit" value="Submit"></input>
+            <input type="submit" value="Login"></input>
         </form>
+  
+
+
     );
 };
+export default Login;

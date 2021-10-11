@@ -5,7 +5,6 @@ export const Login = (props) => {
 
     const sendDates = (event) => {
         event.preventDefault();
-        console.log("hi");
         history.push('/home');
         
        

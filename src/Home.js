@@ -1,25 +1,13 @@
-import { useState } from "react";
+import React,{ useContext } from "react";
 import Task from './Task';
+import TaskContext from './TaskContext';
 
 export const Home = (props) => {
 
     const  {history} = props;
-
-    const [tasks, settask] = useState ([ {
-        "nameTask":"1",
-        "description":"2",
-        "due_date":"due date",
-        "assigment":"2",
-        "status":"3"
-    },{
-        "nameTask":"2",
-        "description":"3",
-        "due_date":"due4 date",
-        "assigment":"4",
-        "status":"4"
-    }]);
-
-   
+    const { getTasks } = useContext(TaskContext);
+    const tasks=getTasks();
+        
     return(
         <div key="home">  
             {tasks.map((task,index) =>{                
@@ -30,12 +18,13 @@ export const Home = (props) => {
                         Due_Date={task.due_date}
                         AssigmentTo={task.assigment}
                         Status={task.status}
+                        Index={index}
                         key={index}
                     />
                 );
                 
             })}
-
+            <button onClick={()=> history.push("/Salir")}>Exit</button>
             <button onClick={()=> history.push("/Task_form")}>Add Task</button>
                 
         </div>

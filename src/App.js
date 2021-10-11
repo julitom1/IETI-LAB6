@@ -10,6 +10,7 @@ import Login from './Login';
 import Home from './Home';
 import Task_form from './Task_form';
 import TaskState from './TaskState';
+import Task_form_update from './Task_form_update';
 
 
 
@@ -20,6 +21,7 @@ function App() {
       <TaskState>
       <Router>
         <Switch>
+        <Route path="/Task_form/:taskName" component={Task_form_update}/>
           <Route path="/Login" component={Login}/>
           <Route path="/Home" component={Home}/>
           <Route path="/otra" component={Login}/>

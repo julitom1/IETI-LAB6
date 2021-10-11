@@ -20,6 +20,7 @@ export const Home = (props) => {
                         Status={task.status}
                         Index={index}
                         key={index}
+                    
                     />
                 );
                 

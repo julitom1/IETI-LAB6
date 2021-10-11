@@ -8,31 +8,40 @@ const TasksState = (props) => {
 
     const getTasks = () => {
         return tasks;
+    } 
+    const getTask = (idTask) => {
+        const nTask=searchTask(idTask);
+        return tasks[nTask];
     }
 
     const newTask = (task) => {
         setTasks([...tasks,task]);
     }
+    const searchTask = (idTask) => {
+        for(let i=0;i<tasks.length;i++){
+            if(idTask===tasks[i].nameTask){
+                return i;
+            }
+        
+        }
+    }
+    const updateTask = (idTask,task) => {
+        const nTask=searchTask(idTask);
+        const arr = [...tasks];
+        arr[nTask]=task;
+        setTasks(arr); 
+    }
 
     return(
         <TaskContext.Provider value={{
             getTasks,
-            newTask
+            newTask,
+            updateTask,
+            getTask
         }}>
             {props.children}
         </TaskContext.Provider>
     )
 }
- 
-export default TasksState;
 
-    /**function add(){
-        const newTask = {
-            nameTask: document.getElementById("name").value,
-            description: document.getElementById("description").value,
-            due_date: document.getElementById("date").value,
-            assigment: document.getElementById("assigned").value,
-            status: document.getElementById("status").value
-          };
-    }**/
-  
+export default TasksState;

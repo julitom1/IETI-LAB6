@@ -8,7 +8,7 @@ import {
 
 import Login from './Login';
 import Home from './Home';
-import Task_form from './Task_form';
+import newTask from './newTask';
 import TaskState from './TaskState';
 import Task_form_update from './Task_form_update';
 
@@ -25,7 +25,7 @@ function App() {
           <Route path="/Login" component={Login}/>
           <Route path="/Home" component={Home}/>
           <Route path="/otra" component={Login}/>
-          <Route path="/Task_form" component={Task_form}/>
+          <Route path="/Task_form" component={newTask}/>
           <Route path="/" component={Login}/>
         </Switch>
       </Router> </TaskState> 

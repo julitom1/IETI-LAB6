@@ -1,24 +1,27 @@
-
-import React, { useState,useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import TaskContext from './TaskContext';
 import TaskForm from './Task_form';
 
-export const Task_form_update = (props) => {
+
+export const NewTask = (props) => {
 
     const  {history} = props;
-    const { updateTask } = useContext(TaskContext);
+    const { newTask } = useContext(TaskContext);
 
-    const uriTask=window.location.pathname.split("/")[2];
-    const { getTask } = useContext(TaskContext);
-    const tasktoUpdate=getTask(uriTask);
+    const [taskValue, setTaskValue] = useState({
+        description: "",
+        nameTask: "",
+        due_date: "",
+        assigment: "",
+        status: ""
+    });
 
-    const [taskValue, setTaskValue] = useState(tasktoUpdate);
     function sendDates(event){
         event.preventDefault();
-        updateTask(uriTask,taskValue);
-        history.push("/Home")
-        
+        newTask(taskValue);
+        history.push("/home");        
     }
+
     const handleTextChange = (event) => {
         
         const value = event.target.value;
@@ -33,15 +36,17 @@ export const Task_form_update = (props) => {
             status: updateTask.status
         });
       }
+
     
+
     return(
         <TaskForm
             sendDates = {sendDates}
-            nameButton= {"Update"}
+            nameButton= {"Add"}
             handleTextChange = {handleTextChange}
             task = {taskValue}
 
         />
     );
 };
-export default Task_form_update;
+export default NewTask;

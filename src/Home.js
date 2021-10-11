@@ -7,6 +7,7 @@ export const Home = (props) => {
     const  {history} = props;
     const { getTasks } = useContext(TaskContext);
     const tasks=getTasks();
+    console.log(tasks);
         
     return(
         <div key="home">  

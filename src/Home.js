@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Task from './Task';
 import TaskContext from './TaskContext';
 import './css/home.css';
+import logo from './img/signo.png'; // with 
 
 export const Home = (props) => {
 
@@ -13,7 +14,7 @@ export const Home = (props) => {
         
     return(
         <div id="home" key="home">  
-            <div className="stick"><button className="button" onClick={()=> history.push("/Task_form")}>Add Task</button></div>
+            <div className="stick"><img alt='some value' className="button" src={logo} onClick={()=> history.push("/Task_form")}/>  </div>
             <div id="exit"><Link to = "/">Log out</Link></div>
             <label className="titulos">Tasks</label>
             {tasks.map((task,index) =>{                

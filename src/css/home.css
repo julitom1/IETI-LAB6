@@ -37,12 +37,13 @@
 
     position: -webkit-sticky;
     position: sticky;
-    top: 92%;
+    top: 90%;
     z-index: 10;
 
 }
 #home .stick .button{
-    width: 15%;
+    width: 40px;
     position: absolute;
-    right: 0%;
+    right: -1%;
+    cursor: pointer;
 }

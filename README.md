@@ -4,44 +4,50 @@
 
 Frontend de una aplicación para agregar nuevas tareas, consultarlas y actualizarlas hecha en React.
 
-##### View Tasks (/Home)
+### Login (/ o /login)
 
-La manera de consultar las Tasks es oprimiendo encima de la tarea y esta desplegara.
+Al oprimir el boton "Login" lo llevara para "/Home"
 
-![](img/2.PNG)
+![](img/Captura1.PNG)
+
+### View Tasks (/Home)
+
+En /Home se encuentran las tareas existentes, la manera de consultar las Tareas es oprimiendo encima de la tarea y esta desplegara.
+
+![](img/Captura2.PNG)
 
 Desplegando las tareas para verlas.
 
-![](img/3.PNG)
+![](img/Captura3.PNG)
 
-##### Add New Task (/Task_form)
+### Add New Task (/Task_form)
 
-En el boton de "+" es para crear una nueva tarea.
+En el boton de "+" de /Home es para crear una nueva tarea.
 
-![](img/2.PNG)
+![](img/Captura2.PNG)
 
-Se creo una tarea llamada "Tasks", completando los campos.
+Se creo una tarea llamada "Tasks", completando los campos que se pedian y oprimiendo el botón "Add", al oprimirlo creaba la tarea y nos devolvia a "/Home".
 
-![](img/4.PNG)
+![](img/Captura4.PNG)
 
-Y secomprobo que se haya creado.
+Y se comprobo que se haya creado la tarea.
 
-![](img/5.PNG)
+![](img/Captura5.PNG)
 
-##### Add Update Task (/Task_form/{name_task}) en este caso /Task_form/Tests
+### Add Update Task (/Task_form/{name_task}) en este caso /Task_form/Tests
 
 
-Cada "Task" al desplegarlo tiene el boton de "update", para actualizar la "Task"
+Cada tarea al desplegarla tiene el boton de "update", para actualizar la tarea
 
-![](img/5.PNG)
+![](img/Captura5.PNG)
 
-al oprimirlo aparece la ventana con los datos de la "Task" y se cambia el dato que quiere en este caso se cambio el Status cambio que estaba en "Not in Progress" por "In progress" 
+al oprimirlo aparece la ventana con los datos de la tarea y se cambia el dato que quiere, en este caso se cambio el Status que estaba en "Not in Progress" por "In progress" 
 
-![](img/6.PNG)
+![](img/Captura6.PNG)
 
 Y por último se confirmaron los cambios
 
-![](img/7.PNG)
+![](img/Captura7.PNG)
 
 
 ### Autores:

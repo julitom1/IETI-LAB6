@@ -1,4 +1,5 @@
 import './css/iniciarSesion.css';
+import './css/general.css';
 export const Login = (props) => {
 
     const  {history} = props;
@@ -10,7 +11,7 @@ export const Login = (props) => {
     }
     return(
         <div id="login">
-            <label>Iniciar Sesión</label>
+            <label class="titulos">Log In</label>
             <form onSubmit={sendDates}>
                 <input type="text" className="user" class="square-text" placeholder="username"></input><br />
                 <input type="password" className="password" class="square-text" placeholder="Password"></input><br />

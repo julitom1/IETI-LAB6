@@ -1,6 +1,8 @@
 import React,{ useContext } from "react";
+import { Link } from "react-router-dom";
 import Task from './Task';
 import TaskContext from './TaskContext';
+import './css/home.css';
 
 export const Home = (props) => {
 
@@ -10,7 +12,10 @@ export const Home = (props) => {
     console.log(tasks);
         
     return(
-        <div key="home">  
+        <div id="home" key="home">  
+            <div className="stick"><button className="button" onClick={()=> history.push("/Task_form")}>Add Task</button></div>
+            <div id="exit"><Link to = "/">Log out</Link></div>
+            <label className="titulos">Tasks</label>
             {tasks.map((task,index) =>{                
                 return(
                     <Task 
@@ -26,9 +31,7 @@ export const Home = (props) => {
                 );
                 
             })}
-            <button onClick={()=> history.push("/Salir")}>Exit</button>
-            <button onClick={()=> history.push("/Task_form")}>Add Task</button>
-                
+            
         </div>
     );
 };

@@ -2,7 +2,7 @@
 import React, { useState,useContext } from 'react';
 import TaskContext from './TaskContext';
 import TaskForm from './Task_form';
-
+import './css/form_task.css';
 export const Task_form_update = (props) => {
 
     const  {history} = props;
@@ -14,9 +14,11 @@ export const Task_form_update = (props) => {
 
     const [taskValue, setTaskValue] = useState(tasktoUpdate);
     function sendDates(event){
-        event.preventDefault();
-        updateTask(uriTask,taskValue);
-        history.push("/Home")
+        
+            event.preventDefault();
+            updateTask(uriTask,taskValue);
+            history.push("/Home")
+        
         
     }
     const handleTextChange = (event) => {
@@ -36,6 +38,7 @@ export const Task_form_update = (props) => {
     
     return(
         <TaskForm
+            titulo = {"Update Task"}
             sendDates = {sendDates}
             nameButton= {"Update"}
             handleTextChange = {handleTextChange}

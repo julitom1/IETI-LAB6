@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import TaskContext from './TaskContext';
 import TaskForm from './Task_form';
-
+import './css/form_task.css';
 
 export const NewTask = (props) => {
 
@@ -41,6 +41,7 @@ export const NewTask = (props) => {
 
     return(
         <TaskForm
+            titulo = {"New Task"}
             sendDates = {sendDates}
             nameButton= {"Add"}
             handleTextChange = {handleTextChange}

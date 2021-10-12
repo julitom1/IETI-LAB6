@@ -1,5 +1,5 @@
 import React from "react";
-import {  useHistory} from 'react-router-dom';
+import { Link } from "react-router-dom";
 export const Task = ({NameTask, Description, Due_Date,AssigmentTo,Status}) => {
 
     
@@ -9,7 +9,10 @@ export const Task = ({NameTask, Description, Due_Date,AssigmentTo,Status}) => {
     const Due_Date1="Due_Date3-"+NameTask
     const AssigmentTo1="AssigmentTo4-"+NameTask
     const Status1="Status5-"+NameTask
-    const history = useHistory();
+    const path='/Task_form/'+{NameTask}.NameTask;
+    const styleOfTheComponent ={
+        display: "none"
+    }
     function Desplegar(){
         var children = document.getElementById(NameTask).childNodes;
         let i;
@@ -26,13 +29,13 @@ export const Task = ({NameTask, Description, Due_Date,AssigmentTo,Status}) => {
     }
     
     return(
-        <div key={NameTask} id={NameTask}>
-            <span onClick={()=> Desplegar()} id={NameTask1}>{NameTask}</span><br/>
-            <span key={Description1} id={Description1}>{Description}</span><br/>
-            <span key={Due_Date1} id={Due_Date1}>{Due_Date}</span><br/>
-            <span key={AssigmentTo1} id={AssigmentTo1}>{AssigmentTo}</span><br/>
-            <span key={Status1} id={Status1}>{Status}</span><br/>
-            <button onClick={()=> history.push('/Task_form/'+{NameTask}.NameTask)}>Update</button>
+        <div key={NameTask} id={NameTask} className="task" onClick={()=> Desplegar()}>
+            <div className="nameTask-1"><span  id={NameTask1}>{NameTask}</span></div>
+            <div key={Description1} id={Description1} style={styleOfTheComponent}><label className="details-pre">Description: </label><span class="details-pos">{Description}</span></div>
+            <div key={Due_Date1} id={Due_Date1} style={styleOfTheComponent}><label className="details-pre">Due Date: </label><span class="details-pos">{Due_Date}</span></div>
+            <div key={AssigmentTo1} id={AssigmentTo1} style={styleOfTheComponent}><label className="details-pre">Assigment To: </label><span class="details-pos">{AssigmentTo}</span></div>
+            <div key={Status1} id={Status1} style={styleOfTheComponent}><label className="details-pre">Status: </label><span class="details-pos">{Status}</span></div>
+            <div style={styleOfTheComponent} className="button"><Link to={path}>Update</Link></div>
     
         </div>
     );

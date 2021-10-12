@@ -2,19 +2,14 @@
     text-align: center;
 }
 
-label{
-    padding-top: 25px;
-    font-size:35px;
-    font-weight: 700;
-}
-form{
+#login form{
     margin-top:10px;
 }
-.square-text{
+#login .square-text{
     margin:5px;
     height: 23px;
 }
-.submit{
+#login .submit{
     width: 80px;
     font-size: 18px;
     margin-top:5px;

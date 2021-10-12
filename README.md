@@ -22,11 +22,11 @@ Desplegando las tareas para verlas.
 
 ### Add New Task (/Task_form)
 
-En el boton de "+" de /Home es para crear una nueva tarea.
+En el boton de "+" de /Home es para crear una nueva tarea, al oprimirlo nos lleva a "/Task_form"
 
 ![](img/Captura2.PNG)
 
-Se creo una tarea llamada "Tasks", completando los campos que se pedian y oprimiendo el botón "Add", al oprimirlo creaba la tarea y nos devolvia a "/Home".
+en "/Task_form" se creo una tarea llamada "Tasks", completando los campos que se pedian y oprimiendo el botón "Add", al oprimirlo creaba la tarea y nos devolvia a "/Home".
 
 ![](img/Captura4.PNG)
 
@@ -41,7 +41,7 @@ Cada tarea al desplegarla tiene el boton de "update", para actualizar la tarea
 
 ![](img/Captura5.PNG)
 
-al oprimirlo aparece la ventana con los datos de la tarea y se cambia el dato que quiere, en este caso se cambio el Status que estaba en "Not in Progress" por "In progress" 
+al oprimirlo nos lleva a "/Task_form/{name_task}" que contiene el mismo formulario que el de crear una tarea, pero tiene los campos llenos con los datos de la tarea que se selecciono, se cambia el dato que se quiere modificar, en este caso se cambio el Status que estaba en "Not in Progress" por "In progress" 
 
 ![](img/Captura6.PNG)
 
